@@ -1,10 +1,22 @@
 # -*- coding: utf-8 -*-
 """Refget Service Info, used for /sequence/service-info endpoint"""
 
+
 SERVICE_INFO = {
-    "circular_supported": False,
-    "algorithms": ["md5", "trunc512"],
-    "subsequence_limit": 300000,
-    "supported_api_versions": ["1.0"]
+    "id": "",
+    "name": "",
+    "type": {
+        "group": "org.ga4gh",
+        "artifact": "refget",
+        "version": "2.0.0"
+    },
+    "organization": {},
+    "version": "2.0.0",
+    "refget": {
+       "circular_supported": False,
+       "subsequence_limit": 300000,
+       "algorithms":  ["md5", "ga4gh"],
+       "identifier_types": ["insdc", "refseq"],
+    }
 }
 """Refget Service Info Dictionary"""
