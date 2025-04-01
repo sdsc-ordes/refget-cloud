@@ -214,11 +214,6 @@ class GetSequenceHandler(RefgetRequestHandler):
     def get(self, seqid):
         """Get sequence HTTP response"""
 
-        # Parse the seqid to handle namespaced formats (e.g., "md5:<hash>")
-        if ":" in seqid:
-            namespace, hash_id = seqid.split(":", 1)
-            self.g_request.add_path_param("seqid", hash_id)
-
         get_sequence(self.properties, self.g_request, self.g_response)
         self.finalize_response()
 

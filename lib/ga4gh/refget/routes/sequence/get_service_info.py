@@ -26,7 +26,7 @@ def get_service_info(properties, request, response):
         service_info["name"] = properties.get("source.service_name")
         service_info["organization"]["name"] = properties.get("source.organization")
         service_info["organization"]["url"] = properties.get("source.organization_url")
-        response.set_body(json.dumps({
+        response.set_body(json.dumps(
             service_info
-        }))
+            ))
     worker(properties, request, response)
